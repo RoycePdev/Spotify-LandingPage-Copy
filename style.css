@@ -4,10 +4,20 @@
   box-sizing: border-box;
 }
 
+:root {
+  --blue: rgb(41, 65, 171);
+  --green: rgb(30, 215, 96);
+  --black: #121212;
+  --gray: rgb(145, 148, 150);
+  --dark-gray: rgb(34, 35, 38)
+}
+
 .nav-container {
   display: flex;
+  height: 3.25rem;
+  width: 100%;
   justify-content: center;
-  background: rgb(12, 12, 12);;
+  background: var(--black)
 }
 
 .navbar {
@@ -15,19 +25,25 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 5rem;
-  padding: 2.5rem;
-  background: rgb(12, 12, 12);
+  height: 100%;
+  /* padding: 1.5rem; */
+  background: var(--black);
   color: white;
   max-width: 1250px;
 }
 
 .nav-logo-container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
 }
 
 .nav-links-container {
-  display: flex;
+  /* display: flex; */
+  display: none;
   align-items: center;
   height: 100%;
 }
@@ -51,9 +67,92 @@
   display: flex;
   height: 100%;
   align-items: center;
-  margin-left: 15px;
 }
 
 .nav-cta {
   color: rgb(190, 190, 190);
 }
+
+.hero-section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background: var(--blue)
+}
+
+.hero-header {
+  font-family: 'montserrat';
+  text-align: center;
+  color: var(--green);
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 1rem
+  /* background: yellow; */
+}
+
+.hero-paragraph {
+  color: var(--green)
+}
+
+.hero-cta {
+  background: var(--green);
+  color: var(--blue);
+  border: none;
+  height: 3rem;
+  width: 12rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 900px;
+  font-size: .8rem;
+  margin-top: 2rem;
+}
+
+.hero-paragraph {
+  text-align: center;
+  font-family: 'montserrat';
+}
+
+.footer {
+  font-family: 'montserrat';
+  background: var(--black);
+  color: white;
+  padding: 2.5rem 1rem;
+}
+
+.footer-title {
+  color: var(--gray);
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: .75rem;
+  margin-top: 4rem
+}
+
+.footer-link {
+  list-style-type: none;
+  margin-top: 1.5rem;
+}
+
+.company {
+  margin-top: 3rem;
+}
+
+.footer-svg-container {
+height: 3rem;
+width: 3rem;
+padding: .85rem;
+background: var(--dark-gray);
+border-radius: 50%;
+margin-left: 1rem;
+}
+
+.footer-svg-container:first-child  {
+  margin-left: 0;
+}
+.footer-social-media-icons {
+  display: flex;
+  margin-top: 8rem;
+}
+
